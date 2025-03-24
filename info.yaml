@@ -1,7 +1,7 @@
 # Tiny Tapeout project information
 project:
   title:        "Wallace Tree Multiplier"      # Project title
-  author:       "Mariya Manoj P"               # Your name
+  author:       "Team 8"               # Your name
   discord:      ""                             # Optional Discord username
   description:  "4x4 Wallace Tree Multiplier using Half and Full Adders" # Clearer project description
   language:     "Verilog"                      # Verilog as the design language
