@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module tt_um_example (
+module tt_um_template (
     input  wire [7:0] ui_in,    // Input A (4-bit) and B (4-bit)
     output wire [7:0] uo_out,   // Output Product (8-bit)
     input  wire [7:0] uio_in,   // IOs: Input path (Unused, set to 0)
