@@ -2,9 +2,27 @@
  * Copyright (c) 2024 Your Name
  * SPDX-License-Identifier: Apache-2.0
  */
-
 `default_nettype none
 
+// ✅ Half Adder (Must Be Defined First)
+module half_adder(
+    input a, b,
+    output sum, carry
+);
+    assign sum = a ^ b;
+    assign carry = a & b;
+endmodule
+
+// ✅ Full Adder (Must Be Defined Before Wallace Tree Multiplier)
+module full_adder(
+    input a, b, cin,
+    output sum, cout
+);
+    assign sum = a ^ b ^ cin;
+    assign cout = (a & b) | (b & cin) | (a & cin);
+endmodule
+
+// ✅ Wallace Tree Multiplier (Now Includes the Adders)
 module wallace_tree_multiplier(
     input [3:0] A, B,
     output [7:0] product
@@ -46,6 +64,7 @@ module wallace_tree_multiplier(
 
 endmodule
 
+// ✅ Top Module for TinyTapeout
 module tt_um_template (
     input  wire [7:0] ui_in,    
     output wire [7:0] uo_out,
